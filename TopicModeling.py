@@ -114,7 +114,7 @@ class LDA_Models:
 
     def saveModel(self):
         CHECK = True
-        FILE_NAME = ''          # 초기화
+        FILE_NAME = ''      # 변수 초기화
 
         while CHECK:
             FILE_NAME = 'LDA_visualization_{}.html'.format(self.today)
@@ -146,4 +146,4 @@ class LDA_Models:
         min_values = self.perplexityModel(self.min_topics, self.max_topics, is_return= True)
         max_values = self.coherenceModel(self.min_topics, self.max_topics, top_topics, is_return= True)
         
-        self.calculation_lda(num_topics= (max_values - min_topics), use_tfidf= use_tfidf)
+        self.calculation_lda(num_topics= max_values, use_tfidf= use_tfidf)
