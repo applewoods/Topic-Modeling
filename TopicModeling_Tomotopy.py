@@ -164,7 +164,7 @@ class Tomotopy_LDA_Models:
             FILE_PATH = self.path + 'Save_Excel/'
             if FILE_NAME not in os.listdir(FILE_PATH):
                 CHECK = False
-                dataframe.to_excel(FILE_PATH + FILE_NAME, index= False)
+                dataframe.to_excel(FILE_PATH + FILE_NAME, index= True)
 
             else:
                 self.save_file_name += 1
